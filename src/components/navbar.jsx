@@ -1,13 +1,15 @@
 import "./navbar.css";
 
-function Navbar()
-{
-    return(
-        <div className="navbar">
-           menu goes here
-        </div>
-    )
+function NavBar(){
+     return (
+        <div className="navBar">
+            <h5>Menu will be here!</h5>
 
+        <button>test button</button>
+        <label>test label</label>
+
+        </div>
+     );
 }
 
-export default Navbar;
+export default NavBar

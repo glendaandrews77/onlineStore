@@ -1,4 +1,9 @@
-.navbar{
-    color:brown;
-    border: 1px solid blue;
+.navBar{
+    background-color: #e2e2e2;
+    padding: 10px 0;
+}
+
+
+.navbar h5{
+    margin: 0;
 }

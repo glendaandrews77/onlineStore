@@ -1,23 +1,38 @@
-
 import './App.css';
-import Navbar from './components/navbar';
+import NavBar from './components/navbar';
 import Footer from './components/footer';
-import Catalog from './components/catalog';
-import Product from './components/product';
+// import QuantityPicker from './components/quantityPicker';
+import Catalog from './components/pages/catalog';
+// import Product from '../src/components/product';
+import logo from './components/Website-logo.png';
+
 
 function App() {
   return (
     <div className="App">
-      <h1> Hello from React</h1>
-     <Navbar/>
-     <Footer></Footer>
-     <Catalog />
-     <Product/>
-   
+      <header className="App-header">
+        <img src={logo} className="Website-logo.svg" alt="logo" />
+      
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+      <NavBar/>
+     <div className='page-content'>
+      <Catalog/>
+
     </div>
+
+      <Footer></Footer>
+    </div>
+
   );
 }
 
+
 export default App;
-
-

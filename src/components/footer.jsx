@@ -1,14 +1,15 @@
 
 
+import "./footer.css";
 
 function Footer(){
-    return(
-        <div>
-        label myapp the really expendice store of GIGI
-        </div>
+    return (
+<div className="footer">
+    <label>2022 @ all rights reserved  </label>
 
+    <label >  By: Glenda </label>
+</div>
+    );
+}
 
-    )
-
-    }
-    export default Footer;
+export default Footer;
