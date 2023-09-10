@@ -3,10 +3,8 @@ import "./navbar.css";
 function NavBar(){
      return (
         <div className="navBar">
-            <h5>Menu will be here!</h5>
+            <h2>OUR NEW FALL COLLECTION IS IN</h2>
 
-        <button>test button</button>
-        <label>test label</label>
 
         </div>
      );

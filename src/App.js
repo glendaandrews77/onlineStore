@@ -1,38 +1,37 @@
 import './App.css';
 import NavBar from './components/navbar';
 import Footer from './components/footer';
-// import QuantityPicker from './components/quantityPicker';
 import Catalog from './components/pages/catalog';
-// import Product from '../src/components/product';
-import logo from './components/Website-logo.png';
-
+import logo from './components/header-pic.png';
 
 function App() {
   return (
     <div className="App">
+      <h1>GIGI'S KICK'IN HEELS LOUNGE</h1>
       <header className="App-header">
-        <img src={logo} className="Website-logo.svg" alt="logo" />
-      
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div className="image-container">
+    <img src={logo} className="header-pic" alt="logo" />
+  </div> <div className="image-container">
+    <img src={logo} className="header-pic" alt="logo" />
+  </div>
+  <div className="image-container">
+    <img src={logo} className="header-pic" alt="logo" />
+  </div>
+</header>
+  
+  
       <NavBar/>
-     <div className='page-content'>
-      <Catalog/>
 
+      <div className='page-content'>
+        <Catalog/>
+      </div>
+
+      {/* You had an extra <Catalog/> outside of 'page-content', I've removed it. 
+         If you meant to have two Catalog components, simply add it back. */}
+
+      <Footer/>
     </div>
-
-      <Footer></Footer>
-    </div>
-
   );
 }
-
 
 export default App;

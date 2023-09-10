@@ -1,9 +1,7 @@
-.navBar{
-    background-color: #e2e2e2;
-    padding: 10px 0;
-}
-
-
-.navbar h5{
-    margin: 0;
+.navBar {
+    display: flex;
+    justify-content: center; 
+    align-items: end;    
+    height: 15px; 
+    padding:right;
 }

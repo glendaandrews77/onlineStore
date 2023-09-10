@@ -3,35 +3,59 @@ import Product from '../product';
 import DataService from './services/dataService';
 import "./catalog.css";
 
+function Catalog() {
+    const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
+    const [prodsDisplay, setProdsDisplay] = useState([]);
 
-function Catalog(){
-    const [products, setProdcuts] = useState([]);
-
-    function loadCatalog (){
+    function loadCatalog() {
         let service = new DataService();
         let prodList = service.getCatalog();
-        setProdcuts(prodList);
+        setProducts(prodList);
+        setProdsDisplay(prodList);
+        
     }
 
-    //when the component loads
     useEffect(() => {
         console.log("catalog loaded");
-        loadCatalog()
-         },[]);
+        loadCatalog();
+        loadCategory();
+    }, []);
 
-     return (
+    function filter(category) {
+        console.log("filter clicked");
+        let list = products.filter(prod => prod.category === category);
+        setProdsDisplay(list);
+        console.log("Category to filter:", category);
+
+    }
+
+    function clearFilter() {
+        setProdsDisplay(products);
+    }
+
+    function loadCategory() {
+        // let service = new DataService();
+        let prods = prodsDisplay;
+        console.log(prods);
+        let tempCategories = ["Sexy Heels", "Boots", "Boot Heels"];
+        setCategories(tempCategories);
+        setProdsDisplay(prods);
+    }
+
+    return (
         <div className="catalog">
-            <h3>Welcome to the Heels World!</h3>
+        
+            <br />
+            <button onClick={clearFilter} className="btn btn-dark-filter">All</button>
+            {categories.map(c => <button key={c} onClick={() => filter(c)} className='btn btn-sm btn-primary btn-filter'>{c}</button>)}
+            <br />
+            <div className='product-container'>
 
-              <h5>We Have{products.length} Amazing New Sexy Heels Available Now</h5>
-            <div className="products">
-                {products.map((prod) => (
-                <Product key={prod._id} data={prod} />
-                ))}
+            {prodsDisplay.map(p => <Product key={p._id} data={p} />)}
             </div>
         </div>
-     );
-};
-
+    );
+}
 
 export default Catalog;
