@@ -1,8 +1,9 @@
 .footer{
     color: rgb(80, 80, 80); 
     display: flex;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
+    text-align: justify;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;;
     justify-content: space-evenly;
     padding-top: 15px;
     padding-bottom: 20px;

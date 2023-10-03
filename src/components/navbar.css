@@ -1,7 +1,11 @@
-.navBar {
-    display: flex;
-    justify-content: center; 
-    align-items: end;    
-    height: 15px; 
-    padding:right;
+nav{
+    background: linear-gradient(to bottom right, black, tan);
+    color: white !important;
+}
+.nav-link,
+.navbar-brand {
+    color: white !important;
+}
+.nav-item{
+    color:black;
 }

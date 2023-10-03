@@ -1,29 +1,42 @@
 import "./quantityPicker.css";
 import { useState } from 'react';
 
-function QuantityPicker(props){
-    const [quantity, setQuantity] = useState(1);
+// for the buttons on catalog + and - sign
 
-    function handleIncrease() {
-        let nextVal = quantity + 1;
-        setQuantity(nextVal);
-        props.onChange(nextVal);
-    }
+function QuantityPicker(props) {
+    const [quantity, setQuantity] = useState(1); 
 
-    function handleDecrease() {
+    function decrease() {
         if (quantity === 1) return;
-        let nextVal = quantity - 1;
-        setQuantity(nextVal);
-        props.onChange(nextVal);
+        let val = quantity - 1;
+        setQuantity(val);
+        props.onChange(val);
     }
 
-    return (
-        <div className="qty-picker">
-            <button onClick={handleDecrease}>-</button>
-            <span>{quantity}</span>
-            <button onClick={handleIncrease}>+</button>
+    function increase() {
+        let val = quantity + 1;
+        setQuantity(val);
+        props.onChange(val);
+    }
+
+    return ( 
+        <div className="qt-picker"> 
+            <button 
+                className="btn btn-sm btn-outline-light" 
+                onClick={decrease}
+                disabled={quantity === 1} 
+            >
+                -
+            </button>
+            <label>{quantity}</label>
+            <button 
+                className="btn btn-sm btn-outline-light" 
+                onClick={increase}
+            >
+                +
+            </button>
         </div>
     );
-} 
+}
 
 export default QuantityPicker;
