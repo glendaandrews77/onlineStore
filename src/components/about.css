@@ -17,15 +17,20 @@
 .about h3{
     margin-top: 20px;
     font-weight: 100%;
-    color:white;
+    color:rgb(241, 103, 103);
     text-align: center;
 
 }
 .about h5{
     font-size: smaller;
-    color:wheat;
+    color:rgb(34, 29, 21);
+    bottom: auto;
     text-align:end;
+    
 }
 .about p{
-    color: white;
+    color:white;
+    font-size:medium;
+
 }
+

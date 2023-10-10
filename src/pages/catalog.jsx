@@ -11,10 +11,12 @@ function Catalog() {
     async function loadCatalog() {
         let service = new DataService();
         try {
-            let prodList = await service.getCatalog();
+            let prodList = await service.getProducts();
+            console.table(prodList);
             setProducts(prodList);
             setProdsDisplay(prodList);
             loadCategory(prodList);
+            findDupe(prodList)
         } catch (error) {
             console.error("Failed to load catalog:", error);
         }
@@ -24,7 +26,20 @@ function Catalog() {
         console.log("catalog loaded");
         loadCatalog();
     }, []);
+    function findDupe(prodList){
+        const titles = {}
+        const duplicated = []
 
+        for(const prodCheck of prodList){
+            const title = prodCheck.title;
+            if(titles[title]){
+                duplicated.push(title)
+            } else {
+                titles[title]=true
+            }
+        }
+        return console.log("If there are duplicate titles; Here they are" + duplicated)
+    }
     function filter(category) {
         console.log("filter clicked");
         let list = products.filter(prod => prod.category === category);

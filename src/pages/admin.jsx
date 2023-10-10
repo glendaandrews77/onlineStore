@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './admin.css';
+import DataService from '../services/dataService';
 
 function Admin() {
     const [product, setProduct] = useState({});
@@ -9,6 +10,12 @@ function Admin() {
 
     function handleSaveProduct() {
         console.log('product', product);
+      
+        let fixedProd = {...product};
+        fixedProd.price = parseFloat(fixedProd.price);
+        let service = new DataService();
+        service.saveProduct(fixedProd);
+
     }
 
     function handleProductChange(e) {

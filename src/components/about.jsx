@@ -4,19 +4,22 @@ import logo from "./EndImage.jpg";
 
 function About() {
     return( 
-        <div className='about page'>A
+        <div className='about page'>
             <div>
                 <h3>👠KICK'IN UP HEELS👠</h3>
                 <hr />
-                <img src={logo} alt="EndImage" />
-                <h5>Created by:</h5>
-                <h1>Gigi Bailey</h1>
                 
-                <p>WE ARE HERE TO MAKE FEEL SEXY BEAUTIFUL AND CONFIDENT STARTING FROM YOUR HEELS.</p>
+                <p>WE ARE HERE TO MAKE FEEL SEXY BEAUTIFUL AND CONFIDENT STARTING FROM YOUR HEELS AND UP.</p>
+                <img src={logo} alt="EndImage" />
+                
             </div>
-            <div>
-                <p>Its hard to find a pair of heels. We dont just custom make heels, but we aim to please and be sexy at the same. </p>
+            <div className='custom'>
+                <p>Since 2001 we have made footware for women who have special requests and also able wear fashionable heels that is an accent to your clothing. </p>
+                <p>We dont just custom make heels, but we aim to please and be sexy at the same. </p>
             </div>
+
+           
+            <h5>Created by: Gigi Bailey</h5>  
         </div>
     );
 }

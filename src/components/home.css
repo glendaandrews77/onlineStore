@@ -7,7 +7,13 @@
 
 .home h1 {
     color:white;
+    font: size 100px;
+    font-weight: bold;
+
     text-align: center;
+}
+.home.page h1 + p {
+    margin-top: 40px; 
 }
 .img {
 container:unset;
@@ -31,11 +37,14 @@ container:unset;
   .header-pic {
     max-width: none;     
     height: auto;           
-    width: 150px;
-    height: 325px;        
+    width: 280px;
+    height: 400px;    
+    padding: 40px; 
+    background-color:rgb(206, 235, 235);
+    border-radius: 15%;
+    border-top-width: 20%;
+
   }
-  
 
   
-  
-  
+ 

@@ -9,7 +9,7 @@ function Cart() {
     return (
         <div className="cart page">
             <h1>Kicking Up Heels & Check Out</h1>
-            <h3>👠 You have {cart.length} items in the shopping cart 👠</h3>
+            <h4>👠 You have {cart.length} items in the shopping cart 👠</h4>
 
             <div className="prod-list">
               {cart.map((prod) => <CartProduct key={prod._id} data={prod} /> )}
